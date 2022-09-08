@@ -3,10 +3,10 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
-  "password": "password",
-  "password_confirmation": "password"
+  "name": "Test name2",
+  "email": "test2@test2.com",
+  "password": "password2",
+  "password_confirmation": "password2"
 }
 
 ### Sessions create (login)
@@ -17,3 +17,33 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+### Dog Index
+GET http://localhost:3000/dogs.json
+
+### Dog Show
+GET http://localhost:3000/dogs/5.json
+
+### Dog Create
+POST http://localhost:3000/dogs.json
+Content-Type: application/json
+
+{
+  "name": "Jimgo",
+  "age": 1,
+  "breed": "Retriever"
+}
+
+### Dog Update
+PATCH http://localhost:3000/dogs/3.json
+Content-Type: application/json
+
+{
+  "name": "sim",
+  "age": 14,
+  "breed": "poodle"
+}
+
+
+### Dog Destroy
+DELETE  http://localhost:3000/dogs/3.json
